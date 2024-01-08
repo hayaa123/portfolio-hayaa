@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
-*{
+
+* {
     font-family: 'inter';
     /* background: #0D181E; */
+    color: white;
 }
-header{
+
+h1 {
+    font-size: 30px;
+}
+h2{
+    font-size: 24px;
+}
+header {
     display: flex;
     width: 100%;
     height: 70px;
@@ -11,37 +20,44 @@ header{
     justify-content: space-between;
     position: fixed;
     z-index: 10;
-    
-    
+
+
 }
-main{
+
+main {
     background-color: #0D181E;
 }
-header.active{
+
+header.active {
     background-color: white;
     color: black;
 }
-nav{
+
+nav {
     margin-right: 10%;
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: flex-start;
     gap: 50px;
-  
+
 }
-.name{
+
+.name {
     margin-left: 10%;
 }
-nav ul li a ,.name a{
-    color: white; 
+
+nav ul li a,
+.name a {
+    color: white;
     text-decoration: none;
     font-size: 25px;
     font-family: 'Inter';
     font-weight: 500;
 }
 
-#banner{
+#banner {
     background-image: url(assets/images/OIG.veYhYOg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,7 +65,8 @@ nav ul li a ,.name a{
     height: 700px;
     position: relative;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     content: "";
     top: 0;
@@ -60,6 +77,7 @@ nav ul li a ,.name a{
     opacity: 50%;
     z-index: 0;
 }
+
 .banner-content {
     display: flex;
     height: 700px;
@@ -72,19 +90,22 @@ nav ul li a ,.name a{
     gap: 30px;
     padding-top: 50px;
 }
-.intro{
+
+.intro {
     font-size: 30px;
     font-weight: 300;
     color: white;
     font-style: normal;
 }
-.job-title{
+
+.job-title {
     font-size: 72px;
     color: white;
     position: relative;
     padding-bottom: 20px;
 }
-.job-title::after{
+
+.job-title::after {
     position: absolute;
     content: "";
     background-color: white;
@@ -96,7 +117,7 @@ nav ul li a ,.name a{
 }
 
 /* __________ABOUT______________ */
-#about{
+#about {
     display: flex;
     margin-top: 100px;
     margin-left: 10%;
@@ -105,10 +126,12 @@ nav ul li a ,.name a{
 
 
 }
-.hayaa-image{
+
+.hayaa-image {
     position: relative;
 }
-.hayaa-image  svg{
+
+.hayaa-image svg {
     position: absolute;
     background-color: white;
     border-radius: 50%;
@@ -118,18 +141,194 @@ nav ul li a ,.name a{
     height: 70px;
     padding: 20px;
 }
-.about-hayaa{
+
+.about-hayaa {
     color: white;
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 50%;
 }
-.about-hayaa h1{
-    font-size: 30px;
-}
+
 .about-hayaa p {
     font-size: 18px;
     line-height: 150%;
 }
+
 /* __________END ABOUT______________ */
+
+/* __________JOURNEY______________ */
+
+#journey {
+    margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+#journey h1 {
+
+    width: 100%;
+    text-align: center;
+}
+
+.line-list {
+    margin-top: 75px;
+    position: relative;
+}
+
+.line-list .line {
+    position: absolute;
+    left: calc( 50% - 1.5px );
+}
+
+.journey-list {
+    display: flex;
+    gap: 120px;
+    flex-direction: column;
+
+}
+
+.journey-list > div {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 84%;
+    margin: auto;
+}
+
+.journey-list div:nth-child(odd) {
+    flex-direction: row-reverse;
+
+}
+
+.journey-list div:nth-child(1) h2 {
+    margin-right: 8%;
+    font-size: 24px;
+    line-height: 150%;
+}
+.journey-list div:last-of-type h2{
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+.journey-discription{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 45%;
+}
+.journey-discription h2{
+    line-height: 150%;
+}
+
+.journey-discription ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 150%;
+    list-style:disc;
+    padding-left: 30px;
+}
+.journey-icons{
+    position: relative;
+    width: 45%;
+
+}
+.journey-icons:nth-of-type(odd){
+    margin-right: 8%;
+}
+.journey-icons #pie-chart{
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+.journey-icons #table{
+    position: absolute;
+    right:30px;
+    bottom: -30px;
+}
+.journey-icons #code{
+    position: absolute;
+    left: 25%;
+    top: 30px;
+}
+.journey-icons #python{
+    position: absolute;
+    left: 20%;
+    top: 30px;
+}
+.journey-icons #hummer {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+}
+.journey-icons #bug{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+}
+
+.dot {
+    position: absolute;
+    /* left: calc(50% - 16px); */
+    width: 100%;
+}
+.star{
+    position: absolute;
+    width: 100%;
+}
+
+/* __________END JOURNEY :(______________ */
+
+
+/* _________________SKILLS____________________ */
+#skills{
+    height: 700px;
+}
+#skills h1 {
+    width: 100%;
+    text-align: center;
+}
+
+
+.skill{
+    position: absolute;
+        
+}
+
+.code-skills {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+}
+.code-skills div{
+    position: relative;
+    width: 320px;
+}
+/* .skill:nth-of-type(1){
+    left: 30%;
+}
+.skill:nth-of-type(2){
+    left: 23%;
+    top: 6%;
+}
+.skill:nth-of-type(3){
+    left: 22%;
+    top: 20%;
+} */
+
+.skill:nth-child(even) div svg{
+    transform: rotate(180deg);
+}
+.skill div{
+    position: relative;
+}
+.skill div span{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    color: black;
+    width: 80%;
+}
+/* _________________END SKILLS____________________ */
