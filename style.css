@@ -285,7 +285,7 @@ nav ul li a,
 #skills{
     height: 700px;
 }
-#skills h1 {
+#skills h1 , #soft-skills h1, #projects h1 {
     width: 100%;
     text-align: center;
 }
@@ -302,25 +302,138 @@ nav ul li a,
     width: 80%;
     margin: auto;
 }
-.code-skills div{
+.code-skills > div{
     position: relative;
     width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-/* .skill:nth-of-type(1){
-    left: 30%;
+.code-skills .first-part{
+    width: 130px;
+    height: 350px;
+    transform: rotate(45deg);
 }
-.skill:nth-of-type(2){
-    left: 23%;
-    top: 6%;
+.code-skills .forth-part{
+    width: 130px;
+    height: 350px;
+    transform: rotate(45deg) translate(-50px,-50px);
 }
-.skill:nth-of-type(3){
-    left: 22%;
-    top: 20%;
-} */
+.code-skills .fifth-part{
+    margin-top: 55px;
+    margin-left: 55px;
+}
 
-.skill:nth-child(even) div svg{
+.code-skills ul li{
+    position: relative;
+}
+
+.code-skills ul li,.code-skills ul li svg path,.code-skills ul div{
+    transition: 500ms;
+}
+.code-skills ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.code-skills ul div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.code-skills ul li:nth-child(odd):hover div{
+
+    margin: 10px;
+}
+.code-skills ul li:nth-child(even):hover div{
+    margin: 10px;
+}
+.code-skills ul li:hover svg path{
+    fill: gold;
+
+}
+.code-skills .first-part li:nth-child(odd) svg,
+.code-skills .second-part li:nth-child(even) svg,
+.code-skills .forth-part li:nth-child(odd) svg,
+.code-skills .third-part li:nth-child(even) svg
+
+{
+    transform: rotate(270deg);
+}
+.code-skills .first-part li:nth-child(even) svg,
+.code-skills .second-part li:nth-child(odd) svg,
+.code-skills .forth-part li:nth-child(even) svg,
+.code-skills .third-part li:nth-child(odd) svg{
+    transform: rotate(90deg);
+}
+
+.code-skills .fifth-part li:nth-child(even) svg{
     transform: rotate(180deg);
 }
+
+.code-skills .first-part li:nth-child(2),
+.code-skills .second-part li:nth-child(2),
+.code-skills .third-part li:nth-child(2),
+.code-skills .forth-part li:nth-child(2)
+{
+    transform: translate(0px,-30px);
+}
+.code-skills .first-part li:nth-child(3),
+.code-skills .second-part li:nth-child(3),
+.code-skills .third-part li:nth-child(3),
+.code-skills .forth-part li:nth-child(3)
+{
+    transform: translate(0px,-60px);
+}
+.code-skills .first-part li:nth-child(4),
+.code-skills .second-part li:nth-child(4),
+.code-skills .third-part li:nth-child(4),
+.code-skills .forth-part li:nth-child(4)
+{
+    transform: translate(0px,-90px);
+}
+
+.code-skills .fifth-part li:nth-child(2) {
+    transform: translate(-64px, -180px);
+}
+.code-skills .fifth-part li:nth-child(3) {
+    transform: translate(-65px, -180px);
+}
+.code-skills .fifth-part li:nth-child(4){
+    transform: translate(-132px, -370px);
+}
+.code-skills .first-part li span,
+.code-skills .forth-part li span 
+{
+    position: absolute;
+    /* top: 50%; */
+    width: 50%;
+    
+    transform: rotate(-45deg);
+    color: black;
+}
+.code-skills .second-part li span,
+.code-skills .third-part li span
+{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 50%;
+    transform: rotate(45deg);
+    color: black;
+}
+.code-skills .second-part{
+    width: 130px;
+    height: 350px;
+    transform: rotate(-45deg) translate(50px,-50px);
+}
+.code-skills .third-part{
+    width: 130px;
+    height: 350px;
+    transform: rotate(-45deg)
+}
+
 .skill div{
     position: relative;
 }
@@ -332,3 +445,68 @@ nav ul li a,
     width: 80%;
 }
 /* _________________END SKILLS____________________ */
+
+/* _________________SOFT SKILLS____________________ */
+#soft-skills{
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+}
+#soft-skills ul{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 100px;
+
+}
+#soft-skills ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  
+    height: 150px;
+    border-top: 3px solid #FFD700;
+    border-bottom: 3px solid white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 150%;
+
+}
+
+
+/* _________________END SOFTWARE SKILLS____________________ */
+
+/* _________________PROJECTS____________________ */
+
+
+
+#projects{
+    margin-top: 100px;
+  
+}
+.project-window{
+    width: 972px;
+    height: 460px;
+    background-color: white;
+    margin: auto;
+}
+.projects-list{
+    position: relative;
+}
+.projects-list button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: calc( 50% - 35px );
+}
+
+.projects-list button:nth-of-type(1){
+   left: 5%;
+   transform: rotate(180deg);
+}
+.projects-list button:nth-of-type(2){
+    right: 5%;
+}
+
+/* _________________END PROJECTS____________________ */
