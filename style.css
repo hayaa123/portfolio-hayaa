@@ -13,6 +13,7 @@ h2{
     font-size: 24px;
 }
 header {
+    transition: 500ms;
     display: flex;
     width: 100%;
     height: 70px;
@@ -27,10 +28,22 @@ header {
 main {
     background-color: #0D181E;
 }
-
+nav ul li a,
+.name a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Inter';
+    font-weight: 500;
+}
 header.active {
-    background-color: white;
-    color: black;
+    background-color: rgb(253, 250, 233);
+    /* color: black; */
+}
+header.active nav ul li a , 
+header.active .name a span 
+{
+    color: #0D181E;
 }
 
 nav {
@@ -48,14 +61,7 @@ nav ul {
     margin-left: 10%;
 }
 
-nav ul li a,
-.name a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: 'Inter';
-    font-weight: 500;
-}
+
 
 #banner {
     background-image: url(assets/images/OIG.veYhYOg.jpg);
@@ -464,16 +470,50 @@ nav ul li a,
     align-items: center;
     justify-content: center;
     width: 25%;
-  
+    position: relative;
     height: 150px;
-    border-top: 3px solid #FFD700;
-    border-bottom: 3px solid white;
+    /* border-top: 3px solid #FFD700; */
+    /* border-bottom: 3px solid white; */
     font-size: 24px;
     text-align: center;
     line-height: 150%;
 
 }
+#soft-skills ul li:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    transition: 1s;
+}
+#soft-skills ul li:hover::after{
+    background-color: gold;
+}
 
+#soft-skills ul li:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    /* background-image: linear-gradient(90deg, gold, white); */
+    top: 0;
+    background-color: gold;
+}
+
+@keyframes rightandleft {
+    0%{
+        background-image: linear-gradient(90deg,white,gold);
+    }
+    50%{
+        background-image: linear-gradient(90deg,gold,white);
+
+    }
+    100%{
+        background-image: linear-gradient(90deg,white,gold);
+    }
+}
 
 /* _________________END SOFTWARE SKILLS____________________ */
 
@@ -483,17 +523,27 @@ nav ul li a,
 
 #projects{
     margin-top: 100px;
-  
+    
 }
 .project-window{
     width: 972px;
-    height: 460px;
+    position: relative;
+    height: 450px;
     background-color: white;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.projects-list{
-    position: relative;
+.project-window img{
+    width: 98%;
+    height: 96%;
+    object-fit: cover;
 }
+.projects-list div{
+    margin-top: 50px;
+}
+
 .projects-list button{
     border: none;
     background-color: transparent;
@@ -502,11 +552,25 @@ nav ul li a,
 }
 
 .projects-list button:nth-of-type(1){
-   left: 5%;
+   left: -10%;
    transform: rotate(180deg);
 }
 .projects-list button:nth-of-type(2){
-    right: 5%;
+    right: -10%;
 }
 
+.projects-list h2{
+    margin-left: 15%;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.projects-list h2 svg path{
+    transition: 500ms;
+
+}
+.projects-list h2 svg:hover path{ 
+    fill:#FFD700
+}
 /* _________________END PROJECTS____________________ */
