@@ -1,26 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-*{
+
+* {
     font-family: 'inter';
     /* background: #0D181E; */
     color: white;
 }
 
+html {
+    font-size: 18px;
+    /* Root font size */
+}
+
 h1 {
-    font-size: 30px;
+    font-size: 2rem;
 }
-h2{
-    font-size: 24px;
+
+h2 {
+    font-size: 1.5rem;
 }
+
 .hide {
-    display: none;
+    visibility: hidden;
 }
-svg:not(.cv svg) path{
-    transition: 500ms  cubic-bezier(0.22, 0.61, 0.36, 1);
+
+svg:not(.cv svg) path {
+    transition: 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-svg:not(.cv svg):hover path{
+
+svg:not(.cv svg):hover path {
     fill: #FFD700;
 }
+
 header {
     transition: 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
     display: flex;
@@ -37,7 +48,8 @@ header {
 body {
     background-color: #0D181E;
 }
-.cv{
+
+.cv {
     position: fixed;
     display: flex;
     align-items: center;
@@ -51,30 +63,35 @@ body {
     border-radius: 50%;
     transition: 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.cv:hover{
+
+.cv:hover {
     width: 150px;
     height: 150px;
     background-color: #FFD700;
 }
+
 /* .cv:hover svg path{
     fill:white
 }
 .cv:hover span{
     color: white;
 } */
-.cv svg{
+.cv svg {
     width: 70px;
     height: 70px;
 }
-.cv span{
+
+.cv span {
     position: absolute;
     color: black;
     font-family: 'jua';
     /* font-weight: 600; */
     margin-top: 15px;
 }
+
 nav ul li a,
-.name a span,.name a {
+.name a span,
+.name a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -82,14 +99,17 @@ nav ul li a,
     font-weight: 500;
     transition: 500ms;
 }
+
 header.active {
     background-color: #001F3F;
     /* color: black; */
 }
+
 header.active nav ul li a:hover,
-header.active .name a span:hover{
+header.active .name a span:hover {
     color: #FFD700;
 }
+
 /* header.active nav ul li a , 
 header.active .name a span 
 {
@@ -148,14 +168,14 @@ nav ul {
 }
 
 .intro {
-    font-size: 30px;
+    font-size: 1.5em;
     font-weight: 300;
     color: white;
     font-style: normal;
 }
 
 .job-title {
-    font-size: 72px;
+    font-size: 3em;
     color: white;
     position: relative;
     padding-bottom: 20px;
@@ -233,7 +253,7 @@ nav ul {
 
 .line-list .line {
     position: absolute;
-    left: calc( 50% - 1.5px );
+    left: calc(50% - 1.5px);
 }
 
 .journey-list {
@@ -243,7 +263,7 @@ nav ul {
 
 }
 
-.journey-list > div {
+.journey-list>div {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -261,90 +281,106 @@ nav ul {
     font-size: 24px;
     line-height: 150%;
 }
-.journey-list div:last-of-type h2{
+
+.journey-list div:last-of-type h2 {
     padding-top: 15px;
     padding-left: 50px;
 }
 
-.journey-discription{
+.journey-discription {
     display: flex;
     flex-direction: column;
     gap: 40px;
     width: 45%;
 }
-.journey-discription h2{
+
+.journey-discription h2 {
     line-height: 150%;
 }
 
-.journey-discription ul{
+.journey-discription ul {
     display: flex;
     flex-direction: column;
     font-size: 18px;
     line-height: 150%;
-    list-style:disc;
+    list-style: disc;
     padding-left: 30px;
 }
-.journey-icons{
+
+.journey-icons {
     position: relative;
     width: 45%;
 
 }
-.journey-icons:nth-of-type(odd){
+
+.journey-icons:nth-of-type(odd) {
     margin-right: 8%;
 }
-.journey-icons svg{
+
+.journey-icons svg {
     transition: 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.journey-icons #pie-chart{
+
+.journey-icons #pie-chart {
     position: absolute;
     top: -30px;
     left: 0;
 }
-.journey-icons #pie-chart:hover{
-    transform: rotate(20deg);   
+
+.journey-icons #pie-chart:hover {
+    transform: rotate(20deg);
 }
-.journey-icons #table{
+
+.journey-icons #table {
     position: absolute;
-    right:30px;
+    right: 30px;
     bottom: -30px;
 }
-.journey-icons #table:hover{
-    transform: rotate(-20deg);   
+
+.journey-icons #table:hover {
+    transform: rotate(-20deg);
 
 }
-.journey-icons #code{
+
+.journey-icons #code {
     position: absolute;
     left: 25%;
     top: 30px;
 }
-.journey-icons #code:hover{
+
+.journey-icons #code:hover {
     transform: rotate(30deg);
 }
-.journey-icons #python{
+
+.journey-icons #python {
     position: absolute;
     left: 20%;
     top: 30px;
 }
-.journey-icons #python:hover{
+
+.journey-icons #python:hover {
     transform: rotate(-30deg) scale(1.3);
 }
+
 .journey-icons #hummer {
     position: absolute;
     top: 20%;
     left: 8%;
 }
-.journey-icons #hummer:hover{
-    transform: rotate(30deg) ;
+
+.journey-icons #hummer:hover {
+    transform: rotate(30deg);
     width: 60%;
 }
 
-.journey-icons #bug{
+.journey-icons #bug {
     position: absolute;
     top: 50%;
     left: 40%;
 }
-.journey-icons #bug:hover{
-    transform: translate(30px,10px) rotate(100deg);
+
+.journey-icons #bug:hover {
+    transform: translate(30px, 10px) rotate(100deg);
 }
 
 
@@ -353,7 +389,8 @@ nav ul {
     /* left: calc(50% - 16px); */
     width: 100%;
 }
-.star{
+
+.star {
     position: absolute;
     width: 100%;
 }
@@ -362,18 +399,21 @@ nav ul {
 
 
 /* _________________SKILLS____________________ */
-#skills{
+#skills {
     height: 700px;
 }
-#skills h1 , #soft-skills h1, #projects h1 {
+
+#skills h1,
+#soft-skills h1,
+#projects h1 {
     width: 100%;
     text-align: center;
 }
 
 
-.skill{
+.skill {
     position: absolute;
-        
+
 }
 
 .code-skills {
@@ -382,120 +422,132 @@ nav ul {
     width: 80%;
     margin: auto;
 }
-.code-skills > div{
+
+.code-skills>div {
     position: relative;
     width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.code-skills .first-part{
+
+.code-skills .first-part {
     width: 130px;
     height: 350px;
     transform: rotate(45deg);
 }
-.code-skills .forth-part{
+
+.code-skills .forth-part {
     width: 130px;
     height: 350px;
-    transform: rotate(45deg) translate(-50px,-50px);
+    transform: rotate(45deg) translate(-50px, -50px);
 }
-.code-skills .fifth-part{
+
+.code-skills .fifth-part {
     margin-top: 55px;
     margin-left: 55px;
 }
 
-.code-skills ul li{
+.code-skills ul li {
     position: relative;
 }
 
-.code-skills ul li,.code-skills ul li svg path,.code-skills ul div{
+.code-skills ul li,
+.code-skills ul li svg path,
+.code-skills ul div {
     transition: 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.code-skills ul{
+
+.code-skills ul {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.code-skills ul div{
+
+.code-skills ul div {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.code-skills ul li:nth-child(odd):hover div{
+
+.code-skills ul li:nth-child(odd):hover div {
 
     margin: 10px;
 }
-.code-skills ul li:nth-child(even):hover div{
+
+.code-skills ul li:nth-child(even):hover div {
     margin: 10px;
 }
-.code-skills ul li:hover svg path{
+
+.code-skills ul li:hover svg path {
     fill: gold;
 
 }
+
 .code-skills .first-part li:nth-child(odd) svg,
 .code-skills .second-part li:nth-child(even) svg,
 .code-skills .forth-part li:nth-child(odd) svg,
-.code-skills .third-part li:nth-child(even) svg
-
-{
+.code-skills .third-part li:nth-child(even) svg {
     transform: rotate(270deg);
 }
+
 .code-skills .first-part li:nth-child(even) svg,
 .code-skills .second-part li:nth-child(odd) svg,
 .code-skills .forth-part li:nth-child(even) svg,
-.code-skills .third-part li:nth-child(odd) svg{
+.code-skills .third-part li:nth-child(odd) svg {
     transform: rotate(90deg);
 }
 
-.code-skills .fifth-part li:nth-child(even) svg{
+.code-skills .fifth-part li:nth-child(even) svg {
     transform: rotate(180deg);
 }
 
 .code-skills .first-part li:nth-child(2),
 .code-skills .second-part li:nth-child(2),
 .code-skills .third-part li:nth-child(2),
-.code-skills .forth-part li:nth-child(2)
-{
-    transform: translate(0px,-30px);
+.code-skills .forth-part li:nth-child(2) {
+    transform: translate(0px, -30px);
 }
+
 .code-skills .first-part li:nth-child(3),
 .code-skills .second-part li:nth-child(3),
 .code-skills .third-part li:nth-child(3),
-.code-skills .forth-part li:nth-child(3)
-{
-    transform: translate(0px,-60px);
+.code-skills .forth-part li:nth-child(3) {
+    transform: translate(0px, -60px);
 }
+
 .code-skills .first-part li:nth-child(4),
 .code-skills .second-part li:nth-child(4),
 .code-skills .third-part li:nth-child(4),
-.code-skills .forth-part li:nth-child(4)
-{
-    transform: translate(0px,-90px);
+.code-skills .forth-part li:nth-child(4) {
+    transform: translate(0px, -90px);
 }
 
 .code-skills .fifth-part li:nth-child(2) {
     transform: translate(-64px, -180px);
 }
+
 .code-skills .fifth-part li:nth-child(3) {
     transform: translate(-65px, -180px);
 }
-.code-skills .fifth-part li:nth-child(4){
+
+.code-skills .fifth-part li:nth-child(4) {
     transform: translate(-132px, -370px);
 }
+
 .code-skills .first-part li span,
-.code-skills .forth-part li span 
-{
+.code-skills .forth-part li span {
     position: absolute;
     /* top: 50%; */
     width: 50%;
-    
+
     transform: rotate(-45deg);
     color: black;
 }
+
 .code-skills .second-part li span,
-.code-skills .third-part li span
-{
+.code-skills .third-part li span {
     position: absolute;
     top: 50%;
     left: 30%;
@@ -503,35 +555,40 @@ nav ul {
     transform: rotate(45deg);
     color: black;
 }
-.code-skills .second-part{
+
+.code-skills .second-part {
     width: 130px;
     height: 350px;
-    transform: rotate(-45deg) translate(50px,-50px);
+    transform: rotate(-45deg) translate(50px, -50px);
 }
-.code-skills .third-part{
+
+.code-skills .third-part {
     width: 130px;
     height: 350px;
     transform: rotate(-45deg)
 }
 
-.skill div{
+.skill div {
     position: relative;
 }
-.skill div span{
+
+.skill div span {
     position: absolute;
     left: 30%;
     top: 30%;
     color: black;
     width: 80%;
 }
+
 /* _________________END SKILLS____________________ */
 
 /* _________________SOFT SKILLS____________________ */
-#soft-skills{
+#soft-skills {
     margin-top: 100px;
     /* margin-bottom: 100px; */
 }
-#soft-skills ul{
+
+#soft-skills ul {
     display: flex;
     width: 80%;
     margin: auto;
@@ -539,7 +596,8 @@ nav ul {
     margin-top: 100px;
 
 }
-#soft-skills ul li{
+
+#soft-skills ul li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -553,6 +611,7 @@ nav ul {
     line-height: 150%;
 
 }
+
 #soft-skills ul li:after {
     content: "";
     width: 100%;
@@ -562,7 +621,8 @@ nav ul {
     bottom: 0;
     transition: 1s;
 }
-#soft-skills ul li:hover::after{
+
+#soft-skills ul li:hover::after {
     background-color: gold;
 }
 
@@ -577,15 +637,17 @@ nav ul {
 }
 
 @keyframes rightandleft {
-    0%{
-        background-image: linear-gradient(90deg,white,gold);
+    0% {
+        background-image: linear-gradient(90deg, white, gold);
     }
-    50%{
-        background-image: linear-gradient(90deg,gold,white);
+
+    50% {
+        background-image: linear-gradient(90deg, gold, white);
 
     }
-    100%{
-        background-image: linear-gradient(90deg,white,gold);
+
+    100% {
+        background-image: linear-gradient(90deg, white, gold);
     }
 }
 
@@ -595,11 +657,12 @@ nav ul {
 
 
 
-#projects{
+#projects {
     margin-top: 100px;
-    
+
 }
-.project-window{
+
+.project-window {
     width: 972px;
     position: relative;
     height: 450px;
@@ -609,60 +672,68 @@ nav ul {
     align-items: center;
     justify-content: center;
 }
-.project-window img{
+
+.project-window img {
     width: 98%;
     height: 96%;
     object-fit: cover;
 }
-.projects-list div{
+
+.projects-list div {
     margin-top: 50px;
 }
 
-.projects-list button{
+.projects-list button {
     border: none;
     background-color: transparent;
     position: absolute;
-    top: calc( 50% - 35px );
+    top: calc(50% - 35px);
 }
 
-.projects-list button:nth-of-type(1){
-   left: -10%;
-   transform: rotate(180deg);
+.projects-list button:nth-of-type(1) {
+    left: -10%;
+    transform: rotate(180deg);
 }
-.projects-list button:nth-of-type(2){
+
+.projects-list button:nth-of-type(2) {
     right: -10%;
 }
 
-.projects-list h2{
+.projects-list h2 {
     margin-left: 15%;
     margin-bottom: 30px;
     display: flex;
     gap: 30px;
     align-items: center;
 }
-.projects-list p{
+
+.projects-list p {
     width: 60%;
     margin-left: 15%;
     line-height: 150%;
 
 }
-.projects-list h2 svg path{
+
+.projects-list h2 svg path {
     transition: 500ms;
 
 }
-.projects-list h2 svg:hover path{ 
-    fill:#FFD700
+
+.projects-list h2 svg:hover path {
+    fill: #FFD700
 }
+
 /* _________________END PROJECTS____________________ */
 
 /* _________________Footer____________________ */
 
-footer{
+footer {
     margin-top: 100px;
     font-family: 'inter';
     border-top: 1px solid #FFD700;
 }
-.upper-footer{
+
+.upper-footer {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -672,23 +743,99 @@ footer{
     margin: auto;
 
 }
-.upper-footer div{
+
+.upper-footer div {
     display: flex;
     width: 50%;
     justify-content: space-between;
 }
-.upper-footer a{
+
+.upper-footer a {
     display: flex;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
-.lower-footer{
+
+.lower-footer {
     display: flex;
     justify-content: center;
     background-color: #001F3F;
     padding-top: 20px;
     padding-bottom: 20px;
-    
+
 }
+
 /* _________________END Footer____________________ */
 
+
+
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    /* banner */
+    .job-title {
+        width: 90%;
+    }
+
+    /* about */
+    #about {
+        flex-direction: column-reverse;
+    }
+
+
+
+    /* journey */
+    .journey-list>div {
+        flex-direction: row-reverse;
+    }
+
+
+    /* skills  */
+    #skills {
+        height: 100%;
+
+    }
+
+    .code-skills {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 30px;
+        height: 1788px;
+    }
+    .code-skills>div{
+        width: 90%;
+    }
+    .code-skills>div:nth-child(2) {
+        transform: translateY(-100px) translateX(30px);
+
+    }
+
+    .code-skills>div:nth-child(3) {
+        transform: translateY(-440px);
+
+    }
+
+    /* projects */
+    .project-window {
+        width: 50%;
+    }
+
+
+
+    /* footer */
+    .upper-footer {
+        flex-direction: column;
+    }
+
+    .upper-footer div {
+        flex-direction: column;
+    }
+}
