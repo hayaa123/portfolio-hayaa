@@ -10,6 +10,7 @@
 html {
     font-size: 18px;
     /* Root font size */
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -17,7 +18,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.33rem;
+}
+strong{
+    font-weight: 500;
+    line-height: 150%;
 }
 
 .hide {
@@ -236,8 +241,8 @@ nav ul {
 /* __________JOURNEY______________ */
 
 #journey {
-    margin-top: 100px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #journey h1 {
@@ -400,6 +405,7 @@ nav ul {
 
 /* _________________SKILLS____________________ */
 #skills {
+    padding-top: 100px;
     height: 700px;
 }
 
@@ -421,6 +427,8 @@ nav ul {
     gap: 30px;
     width: 80%;
     margin: auto;
+    margin-top: 30px;
+    justify-content: space-between;
 }
 
 .code-skills>div {
@@ -574,19 +582,20 @@ nav ul {
 
 .skill div span {
     position: absolute;
-    left: 30%;
-    top: 30%;
+    left: 25%;
+    top: 35%;
     color: black;
     width: 80%;
 }
 .fifth-part .skill:last-child div span{
     margin-top: 90px;
+    left: 25px;
 }
 /* _________________END SKILLS____________________ */
 
 /* _________________SOFT SKILLS____________________ */
 #soft-skills {
-    margin-top: 100px;
+    padding-top: 100px;
     /* margin-bottom: 100px; */
 }
 
@@ -660,7 +669,7 @@ nav ul {
 
 
 #projects {
-    margin-top: 100px;
+    padding-top: 100px;
 
 }
 
