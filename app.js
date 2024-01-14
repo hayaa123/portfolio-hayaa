@@ -3,11 +3,7 @@ let sliders_imgs = document.querySelectorAll('.projects-list div div img')
 let left_buttons = document.querySelectorAll('.left_button')
 let right_buttons = document.querySelectorAll('.right_button')
 let ltuc_images =[
-    'assets/images/LTUC_website/1.png',
-    'assets/images/LTUC_website/2.png',
-    'assets/images/LTUC_website/3.png',
-    'assets/images/LTUC_website/4.png',
-    'assets/images/LTUC_website/5.png'
+    'assets/images/LTUC_website/coming_soon2.svg'
 ]
 let lifeShare_images =[
     'assets/images/LifeShare/ls1.jpg',
@@ -15,7 +11,14 @@ let lifeShare_images =[
     'assets/images/LifeShare/ls3.jpg',
     'assets/images/LifeShare/ls5.jpg',
 ]
-let projects_images=[ltuc_images,lifeShare_images]
+let filteristic = [
+    
+    'assets/images/Filteristic/filteristic1.jpg',
+    'assets/images/Filteristic/filteristic2.jpg',
+    'assets/images/Filteristic/filteristic3.jpg',
+    'assets/images/Filteristic/filteristic4.jpg',
+]
+let projects_images=[ltuc_images,lifeShare_images,filteristic]
 class Slider{
     constructor(slider_img,button_left,button_right,images){
         this.slider_img = slider_img
@@ -25,9 +28,16 @@ class Slider{
         this.index = 0
     }
     showAndHideArrows(){
-        if (this.index==0){
+
+        if(this.images.length ==1){
+            this.button_left.classList.add('hide')
+            this.button_right.classList.add('hide')
+
+        }
+        else if (this.index==0){
             this.button_left.classList.add('hide')
         }
+        
         else if (this.index==this.images.length-1){
             this.button_right.classList.add('hide')
         }
